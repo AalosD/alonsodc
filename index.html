@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <img src="imgs/img_header2.svg" alt="" srcset="">
+    </header>
+    <nav id="main_navbar">
+        <div class="btn_opn" onclick="openNav()"><i class="fa fa-angle-right" style="font-size:24px; color: #e6e7e8;"></i></div>
+        <a href="">Inicio</a>
+        <a href="">Tus datos <i class="fa fa-angle-right" style="font-size:24px"></i></a>
+        <a href="">Encuestas <i class="fa fa-angle-right" style="font-size:24px"></i></a>
+        <a href="">Servicios <i class="fa fa-angle-right" style="font-size:24px"></i></a>
+        <a href="">Tutorias <i class="fa fa-angle-right" style="font-size:24px"></i></a>
+        <a href="">EGEL <i class="fa fa-angle-right" style="font-size:24px"></i></a>
+        <a href="">Titulación <i class="fa fa-angle-right" style="font-size:24px"></i></a>
+        <a href="">Cerrar sesión</a>
+    </nav>
+    <script>
+        function openNav(){
+            document.getElementById("main_navbar").classList.toggle("opennav");
+        }
+    </script>
+    <main>
+        <section class="main_info">
+            <div class="img_alumno"><img src="" alt="" srcset=""></div>
+            <div class="texto_info"><h2>Tu información en línea</h2></div>
+        </section>
+        <section class="gral_info">
+            <table>
+                <thead>
+                    <tr><th colspan="2"><h2>Información General</h2></th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Estatus:</td>
+                        <td>INSCRITO</td>
+                    </tr>
+                    <tr>
+                        <td>Periodo en curso:</td>
+                        <td>Febrero Junio 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Último periodo cursado:</td>
+                        <td>Agosto Diciembre 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
