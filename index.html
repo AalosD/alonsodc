@@ -1,60 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo-nav-bar.css">
+    <link rel="stylesheet" href="css/estilo-progress-circle.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <header>
-        <img src="imgs/img_header2.svg" alt="" srcset="">
+        <img src="imgs/img_header3.svg" alt="" srcset="">
     </header>
-    <nav id="main_navbar">
-        <div class="btn_opn" onclick="openNav()"><i class="fa fa-angle-right" style="font-size:24px; color: #e6e7e8;"></i></div>
-        <a href="">Inicio</a>
-        <a href="">Tus datos <i class="fa fa-angle-right" style="font-size:24px"></i></a>
-        <a href="">Encuestas <i class="fa fa-angle-right" style="font-size:24px"></i></a>
-        <a href="">Servicios <i class="fa fa-angle-right" style="font-size:24px"></i></a>
-        <a href="">Tutorias <i class="fa fa-angle-right" style="font-size:24px"></i></a>
-        <a href="">EGEL <i class="fa fa-angle-right" style="font-size:24px"></i></a>
-        <a href="">Titulación <i class="fa fa-angle-right" style="font-size:24px"></i></a>
-        <a href="">Cerrar sesión</a>
-    </nav>
-    <script>
-        function openNav(){
-            document.getElementById("main_navbar").classList.toggle("opennav");
-        }
-    </script>
+
+    <!-- Barra de navegacion  
+    <button class="menu-btn" onclick="toggleMenu()">☰ Menú</button>-->
+
+    <!-- Menú off-canvas -->
+    <div class="offcanvas-menu" id="offcanvasMenu">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <ul class="menu-list">
+            <li><a href=""><i class="fa fa-home" style="font-size:24px"></i> Inicio</a></li>
+            <li><a href="#">Tus datos <i class="fa fa-angle-right" style="font-size:24px"></i></a></li>
+            <li><a href="#">Encuestas <i class="fa fa-angle-right" style="font-size:24px"></i></a></li>
+            <li><a href="#">Servicios <i class="fa fa-angle-right" style="font-size:24px"></i></a></li>
+            <li><a href="#">Tutorias <i class="fa fa-angle-right" style="font-size:24px"></i></a></li>
+            <li><a href="#">EGEL <i class="fa fa-angle-right" style="font-size:24px"></i></a></li>
+            <li><a href="#">Titulación <i class="fa fa-angle-right" style="font-size:24px"></i></a></li>
+            <li><a href="#">Cerrar sesión</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- fondo -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <script src="scripts/script-navbar.js"></script>
+
     <main>
-        <section class="main_info">
+        <div class="main_info">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
             <div class="img_alumno"><img src="" alt="" srcset=""></div>
-            <div class="texto_info"><h2>Tu información en línea</h2></div>
+            <div class="texto_info">
+                <h2>Tu información en línea</h2>
+            </div>
+        </div>
+
+
+        <section>
+            <div class="accordion-btn" onclick="toggleAccordion('content1', this)">
+                <h2>Información General <i class="fa fa-angle-down" style="font-size:24px"></i></h2>
+            </div>
+            <div class="accordion-content" id="content1">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Estatus:</td>
+                            <td>INSCRITO</td>
+                        </tr>
+                        <tr>
+                            <td>Periodo en curso:</td>
+                            <td>Febrero Junio 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Último periodo cursado:</td>
+                            <td>Agosto Diciembre 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
-        <section class="gral_info">
-            <table>
-                <thead>
-                    <tr><th colspan="2"><h2>Información General</h2></th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Estatus:</td>
-                        <td>INSCRITO</td>
-                    </tr>
-                    <tr>
-                        <td>Periodo en curso:</td>
-                        <td>Febrero Junio 2025</td>
-                    </tr>
-                    <tr>
-                        <td>Último periodo cursado:</td>
-                        <td>Agosto Diciembre 2024</td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <script src="scripts/scriptAcordeon.js"></script>
+
+        <section>
+            <div class="accordion-btn title" onclick="toggleAccordion('content2')">
+                <h2>Créditos <i class="fa fa-angle-down" style="font-size:24px"></i></h2>
+            </div>
+            <div class="accordion-content creditos" id="content2">
+                <div class="cred-1">
+                    <div class="cred-text">
+                        <h4>Obligatorios</h4>
+                        <p>152</p>
+                        <h4>Cursados</h4>
+                        <p>148</p>
+                    </div>
+                    <div class="progress-circle" style="--progress: 90%;">
+                        <span class="progress-text">90%</span>
+                    </div>
+
+                </div>
+                <div class="cred-1">
+                    <div class="cred-text">
+                        <h4>Optativos</h4>
+                        <p>152</p>
+                        <h4>Cursados</h4>
+                        <p>148</p>
+                    </div>
+                    <div class="progress-circle" style="--progress: 50%;">
+                        <span class="progress-text">90%</span>
+                    </div>
+                </div>
+                <div class="cred-1">
+                    <div class="cred-text">
+                        <h4>Totales</h4>
+                        <p>152</p>
+                        <h4>Cursados</h4>
+                        <p>148</p>
+                    </div>
+                    <div class="progress-circle" style="--progress: 75%;">
+                        <span class="progress-text">90%</span>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <section>
+            <div class="accordion-btn title" onclick="toggleAccordion('content3')">
+                <h2>Documentos <i class="fa fa-angle-down" style="font-size:24px"></i></h2>
+            </div>
+            <div class="accordion-content" id="content3">
+                <div class="doc-text">
+                    <p>Acta de Nacimiento</p>
+                    <p>CURP</p>
+                    <p>Relación de Estudios</p>
+                    <p>Lienzo Institucional</p>
+                </div>
+                <div class="doc-check">
+                    <p><input type="checkbox" name="" id="" checked></p>
+                    <p><input type="checkbox" name="" id="" checked></p>
+                    <p><input type="checkbox" name="" id=""></p>
+                    <p><input type="checkbox" name="" id="" checked></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="accordion-btn title" onclick="toggleAccordion('content4')">
+                <h2>Coordinador de programa <i class="fa fa-angle-down" style="font-size:24px"></i></h2>
+            </div>
+            <div class="accordion-content" id="content4">
+                <div class="cord-icon">
+                    <p><i class="fa fa-user" style="font-size:24px"></i></p>
+                    <p><i class="fa fa-envelope-o" style="font-size:24px"></i></p>
+                    <p><i class="fa fa-phone" style="font-size:24px"></i></p>
+                </div>
+                <div class="cord-text">
+                    <p><b>Nombre: </b>Silvia Husted Ramos</p>
+                    <p><b>E-mail: </b>shusted@uacj.mx</p>
+                    <p><b>Teléfono: </b>656-688-21-00 Ext. 4588</p>
+                </div>
+            </div>
+        </section>
+        <div>
+            <img src="" alt="">
+        </div>
+
     </main>
-    <footer></footer>
+    <footer>
+        <img src="imgs/img_footer.svg" alt="" srcset="">
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,97 @@
+ /* Estilos generales */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Botón de apertura */
+.menu-btn {
+    /*position: fixed;
+    top: 20px;
+    left: 20px;*/
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #1f3354;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Contenedor del menú */
+.offcanvas-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculto inicialmente */
+    width: 250px;
+    height: 100%;
+    background: #1f3354;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Menú abierto */
+.offcanvas-menu.open {
+    left: 0;
+}
+
+/* Botón de cierre */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #e6e7e8;
+}
+
+/* Lista de navegación */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    padding: 15px;
+    border-bottom: 1px solid #e6e7e8;
+}
+
+.menu-list li a {
+    color: #e6e7e8;
+    text-decoration: none;
+    display: block;
+}
+.menu-list li .fa {
+    color: #e6e7e8;
+    
+}
+
+.menu-list li:hover {
+    background: #111927;
+}
+
+/* Fondo oscurecido al abrir el menú */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
