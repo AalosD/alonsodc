@@ -25,13 +25,6 @@
     <!-- Menú off-canvas -->
     <div class="offcanvas-menu" id="offcanvasMenu">
         <button class="close-btn" onclick="toggleMenu()">✖</button>
-        <div class="info-alumno">
-            <div class="img-alumno">
-                <img src="imgs/img-alumno.png" alt="">
-            </div>
-            <p>Bienvenido</p>
-            <h2 class="nombre-alumno">Adrián</h2>
-        </div>
         <ul class="menu-list">
             <li><a href=""><i class="fa fa-home" style="font-size:24px"></i> Inicio</a></li>
             <li><a href="#">Tus datos <i class="fa fa-angle-right" style="font-size:24px"></i></a></li>
@@ -50,8 +43,8 @@
 
     <main>
         <div class="main_info">
+            <div class="img_alumno"><img src="" alt="" srcset=""></div>
             <div class="texto_info">
-                <img src="imgs/inf-linea-icono.svg" alt="">
                 <h2>Tu información en línea</h2>
             </div>
         </div>
@@ -59,15 +52,11 @@
 
         <section>
             <div class="accordion-btn border1" onclick="toggleAccordion('content1', this)">
-                <h3>Información General<i class="fa fa-angle-down" style="font-size:24px"></i></h3>
+                <h2>Información General<i class="fa fa-angle-down" style="font-size:24px"></i></h2>
             </div>
             <div class="accordion-content" id="content1">
                 <table>
                     <tbody>
-                        <tr>
-                            <td>Carrera:</td>
-                            <td>Doctorado en Diseño</td>
-                        </tr>
                         <tr>
                             <td>Estatus:</td>
                             <td>INSCRITO</td>
@@ -89,14 +78,14 @@
 
         <section>
             <div class="accordion-btn border2" onclick="toggleAccordion('content2')">
-                <h3>Créditos <i class="fa fa-angle-down" style="font-size:24px"></i></h3>
+                <h2>Créditos <i class="fa fa-angle-down" style="font-size:24px"></i></h2>
             </div>
             <div class="accordion-content creditos" id="content2">
                 <div class="cred-1">
                     <div class="cred-text">
-                        <p><b>Obligatorios</b></p>
+                        <h4>Obligatorios</h4>
                         <p>152</p>
-                        <p><b>Cursados</b></p>
+                        <h4>Cursados</h4>
                         <p>148</p>
                     </div>
                     <div class="progress-circle" style="--progress: 90%;">
@@ -106,9 +95,9 @@
                 </div>
                 <div class="cred-1">
                     <div class="cred-text">
-                        <p><b>Optativos</b></p>
+                        <h4>Optativos</h4>
                         <p>152</p>
-                        <p><b>Cursados</b></p>
+                        <h4>Cursados</h4>
                         <p>148</p>
                     </div>
                     <div class="progress-circle" style="--progress: 50%;">
@@ -117,9 +106,9 @@
                 </div>
                 <div class="cred-1">
                     <div class="cred-text">
-                        <p><b>Totales</b></p>
+                        <h4>Totales</h4>
                         <p>152</p>
-                        <p><b>Cursados</b></p>
+                        <h4>Cursados</h4>
                         <p>148</p>
                     </div>
                     <div class="progress-circle" style="--progress: 75%;">
@@ -131,7 +120,7 @@
 
         <section>
             <div class="accordion-btn border3" onclick="toggleAccordion('content3')">
-                <h3>Documentos <i class="fa fa-angle-down" style="font-size:24px"></i></h3>
+                <h2>Documentos <i class="fa fa-angle-down" style="font-size:24px"></i></h2>
             </div>
             <div class="accordion-content" id="content3">
                 <div class="doc-text">
@@ -151,7 +140,7 @@
 
         <section>
             <div class="accordion-btn border4" onclick="toggleAccordion('content4')">
-                <h3>Coordinador de programa <i class="fa fa-angle-down" style="font-size:24px"></i></h3>
+                <h2>Coordinador de programa <i class="fa fa-angle-down" style="font-size:24px"></i></h2>
             </div>
             <div class="accordion-content" id="content4">
                 <div class="cord-icon">
@@ -172,7 +161,7 @@
 
     </main>
     <footer>
-        <img src="imgs/Logo-UACJ-claro.svg" alt="" srcset="">
+        <img src="imgs/img_footer.svg" alt="" srcset="">
     </footer>
 </body>
 

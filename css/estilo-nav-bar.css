@@ -7,16 +7,17 @@
 
 /* Botón de apertura */
 .menu-btn {
-    /*position: fixed;
-    top: 20px;
-    left: 20px;*/
+    width: 30px;
+    height: 100vh;
+    position: fixed;
     font-size: 24px;
     cursor: pointer;
     background-color: #1f3354;
-    color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+}
+.menu-btn .fa{
+    color: #e6e7e8;
 }
 
 /* Contenedor del menú */
@@ -31,7 +32,7 @@
     transition: left 0.3s ease-in-out;
     padding-top: 60px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Menú abierto */
@@ -77,6 +78,23 @@
     background: #111927;
 }
 
+.info-alumno{
+    display: grid;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+.info-alumno p, .info-alumno h2{
+    color: #e6e7e8;
+}
+.img-alumno{
+    text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
 /* Fondo oscurecido al abrir el menú */
 .overlay {
     position: fixed;
@@ -88,7 +106,7 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    z-index: 1;
+    z-index: 2;
 }
 
 .overlay.active {
